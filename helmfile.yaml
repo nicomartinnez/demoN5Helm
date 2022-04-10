@@ -1,0 +1,11 @@
+environments:
+  dev:
+  stage:
+---
+releases:
+  - name: demon5-{{ .Environment.Name }}
+    chart: ./demon5
+    values:
+    - ./demon5/values-{{ .Environment.Name }}.yaml
+    secrets:
+    - ./demon5/secrets-{{ .Environment.Name }}-enc.yaml
