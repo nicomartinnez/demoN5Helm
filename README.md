@@ -10,14 +10,13 @@
 * MiniKube
 * Kubectl
 
- 
+* The secret variable is `GLOBAL_SECRET`, within the cluster it can be viewed with an `echo $GLOBAL_SECRET` and the environment variable is `env_name`, both should show the environment that was deployed 
 
 #### Usage
 
 * Clone the repository and run the following commands to run the infrastructure:
 
 ```minikube start``` to start the provider
-```helmfile sync ``` to deploy the configuration file ```helmfile.yaml```
 ```Terraform init``` Terraform command to start the providers configuration in terraform and configure the workspace
 ```terraform plan``` Command to start the code compilation and show an output of what you want to apply
 ```terraform apply``` Command to apply the infrastructure and create the minicluster
